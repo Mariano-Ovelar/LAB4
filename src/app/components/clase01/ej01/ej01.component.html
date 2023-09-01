@@ -1,0 +1,29 @@
+<div>
+  <label>{{ textLabelEdad1 }}</label>
+  <input
+    type="number"
+    [(ngModel)]="numEdad1"
+    placeholder="Ingrese edad 1"
+    min="0"
+    max="120"
+  />
+</div>
+<div>
+  <label>{{ textLabelEdad2 }}</label>
+  <input
+    type="number"
+    [(ngModel)]="numEdad2"
+    placeholder="Ingrese edad 2"
+    min="0"
+    max="120"
+  />
+</div>
+<div>
+  <input type="button" [value]="btnLabelCalular" (click)="calular()" />
+  <input type="button" [value]="btnLabelLimpiar" (click)="limpiar()" />
+</div>
+
+<div>
+  <h2>Suma: {{ numSuma }}</h2>
+  <h2>Promedio: {{ numPromedio }}</h2>
+</div>

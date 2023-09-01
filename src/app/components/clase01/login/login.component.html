@@ -1,0 +1,13 @@
+<p>login works!</p>
+
+<div>
+  <label>{{ textLabelNombre }}</label>
+  <input type="text" [(ngModel)]="nombre" placeholder="Ingrese nombre" />
+</div>
+<div>
+  <label>{{ textLabelClave }}</label>
+  <input type="text" [(ngModel)]="clave" placeholder="Ingrese clave" />
+</div>
+<div>
+  <input type="button" [value]="btnLabelEnviar" (click)="Enviar()" />
+</div>
