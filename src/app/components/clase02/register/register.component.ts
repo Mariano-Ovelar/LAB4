@@ -2,26 +2,26 @@ import { Component } from '@angular/core';
 import { Usuario } from 'src/app/class/usuario';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
 })
-export class LoginComponent {
+export class RegisterComponent {
   public textLabelNombre: string = 'Nombre';
   public textLabelClave: string = 'Clave';
 
-  public btnLabelEnviar: string = 'Enviar';
+  public btnLabelEnviar: string = 'Registrarte';
 
   private persona?: Usuario;
   public nombre: string = '';
   public clave: string = '';
 
-  public Enviar(): void {
+  public Registrar(): void {
     try {
       this.persona = new Usuario(this.nombre, this.clave);
-      this.persona.Entrar();
-      console.log(`Bienvenido ${this.persona.nombre}.`);
-      alert(`Bienvenido ${this.persona.nombre}.`);
+      localStorage.setItem('Usuario', JSON.stringify(this.persona));
+      console.log(`Se a registrado: ${this.persona.nombre}.`);
+      alert(`Se a registrado: ${this.persona.nombre}.`);
     } catch (error) {
       alert(error);
       console.log(`Error: ${error}`);

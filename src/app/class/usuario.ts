@@ -30,4 +30,10 @@ export class Usuario {
     }
     this._clave = newClave;
   }
+
+  Entrar() {
+    if (JSON.stringify(this) !== localStorage.getItem('Usuario')) {
+      throw 'Revise si los datos son los correctos.';
+    }
+  }
 }

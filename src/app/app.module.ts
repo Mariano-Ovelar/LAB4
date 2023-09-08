@@ -9,9 +9,10 @@ import { Ej01Component } from './components/clase01/ej01/ej01.component';
 import { BienvenidoComponent } from './components/clase01/bienvenido/bienvenido.component';
 import { LoginComponent } from './components/clase01/login/login.component';
 import { ErrorComponent } from './components/clase01/error/error.component';
+import { RegisterComponent } from './components/clase02/register/register.component';
 
 @NgModule({
-  declarations: [AppComponent, BindingComponent, Ej01Component, BienvenidoComponent, LoginComponent, ErrorComponent],
+  declarations: [AppComponent, BindingComponent, Ej01Component, BienvenidoComponent, LoginComponent, ErrorComponent, RegisterComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
